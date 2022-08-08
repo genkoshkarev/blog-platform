@@ -1,0 +1,90 @@
+.author-page__header {
+  /* background: var(--color-primary); */
+  background: linear-gradient(to right, #25c481, var(--color-primary));
+  padding: 2em 0;
+  color: #fff;
+  margin-top: -20px;
+}
+.nav {
+  /* background: var(--color-primary); */
+  background: linear-gradient(to right, #25c481, var(--color-primary));
+  box-shadow: none;
+}
+.nav-logo a {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  border-radius: 12px 9px 30px 34px;
+}
+.nav-dropdown {
+  background: var(--color-primary);
+}
+
+.menu ul li a,
+.menu ul li a:visited {
+  /* background: var(--color-primary); */
+  color: var(--color-bg);
+}
+.menu ul li a:hover,
+.menu ul li a:visited:hover {
+  color: var(--color-primary);
+  background: var(--color-bg);
+}
+.progress-container {
+  height: 0;
+}
+
+.author-page__header h1 {
+  font-size: 2rem;
+  color: var(--color-bg);
+}
+.author-page__header p {
+  font-size: 1.2rem;
+}
+.author-page__header h2 {
+  font-size: 1rem;
+  margin-left: 50px;
+}
+.author-page__header .author-page__menu a:hover {
+  color: var(--color-text);
+  text-decoration: underline var(--color-text) 2px;
+}
+.author-page__header .author-page__menu a.active {
+  text-decoration: none;
+}
+.author-page__header .author-page__menu a.active {
+  font-size: 1.3rem;
+}
+.author-page__header .author-page__menu a {
+  color: var(--color-bg);
+  text-decoration: underline var(--color-bg) 2px;
+}
+
+.author-page__header .article-author {
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+}
+.author-page__header .article-author picture {
+  height: 120px;
+  width: 120px;
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
+}
+.author-page__header .article-author picture {
+  border: 4px var(--color-bg) solid;
+  border-radius: 100%;
+  margin: -24px 32px 0 -90px;
+}
+.author-page__header .article-author picture img {
+  border-radius: 100%;
+}
+
+.author-page__header ul.author-page__menu {
+  display: flex;
+  margin: 3rem 0;
+  list-style: disc;
+}
+.author-page__header .author-page__menu li {
+  font-size: 1.2rem;
+  margin: 0 1.5rem;
+}

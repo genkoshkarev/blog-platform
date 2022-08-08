@@ -1,0 +1,26 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} !-d
+RewriteCond %{REQUEST_URI} !^.*\.(jpg|jpeg|css|js|gif|png|webp|woff2)$ [NC]
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+<IfModule mod_headers.c>
+  # Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' *.site.com;  style-src 'self' 'unsafe-inline'; script-src 'self'"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Frame-Options "DENY"
+  <FilesMatch "\.(php|html|htm|xml)$">
+    Header set Cache-Control "no-store, no-cache, max-age=0"
+  </FilesMatch> 
+  <FilesMatch "\.(gif|ico|jpg.webp|jpeg|webp|png|svg)$">
+    Header set Cache-Control "max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(js|css)$">
+    Header set Cache-Control "max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.(woff|woff2|eot|otf|ttf)$">
+    Header set Cache-Control "max-age=2592000"
+  </FilesMatch>
+  Header set Access-Control-Allow-Origin *
+
+</ifModule>
